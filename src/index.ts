@@ -14,6 +14,8 @@ export interface Options {
   functionName?: string
   /** output format - as JavaScript template string or as Markdown. Default: markdown */
   format?: 'markdown' | 'javascriptString' | 'javascriptStringNoVar'
+  /** Prints usage help and exit */
+  help?: boolean
 }
 
 export function printHelp(options: Options): string {

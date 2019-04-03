@@ -3,6 +3,10 @@ import { Options, printHelp } from '.';
 
 export async function mainCli() {
   const config = getConfig()
+  if(config.help) {
+    console.log(printOwnHelp())
+    process.exit(0)
+  }
   if (!config.input || !config.interfaceName) {
     console.log('Incorrect call\n' + printOwnHelp());
     process.exit(1)
